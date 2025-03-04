@@ -1,0 +1,23 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.barra {
+  display: flex;
+  flex-direction: column;
+
+  @include m.bp-tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    width: 50%;
+    margin: 0 auto;
+
+    @include m.bp-tablet {
+      width: 20rem;
+      margin: 0;
+    }
+  }
+}
