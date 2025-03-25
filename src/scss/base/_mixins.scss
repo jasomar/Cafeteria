@@ -1,20 +1,25 @@
-@use 'base/variables' as v;
+@use "base/variables" as v;
 
 @mixin bp-mobile {
-    @media (min-width:v.$mobile) {
-        @content;
-    }
+  @media (min-width: v.$mobile) {
+    @content;
+  }
 }
 
 @mixin bp-tablet {
-    @media (min-width:v.$tablet) {
-        @content;
-    }
+  @media (min-width: v.$tablet) {
+    @content;
+  }
 }
 
 @mixin bp-desktop {
-    @media (min-width:v.$desktop) {
-        @content;
-    }
+  @media (min-width: v.$desktop) {
+    @content;
+  }
 }
 
+@mixin grid($columnas, $gap) {
+  display: grid;
+  grid-template-columns: repeat($columnas, 1fr);
+  column-gap: $gap;
+}
